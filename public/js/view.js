@@ -1,5 +1,5 @@
 const item = window.localStorage.getItem("boards")
-
+const delete_btn = document.querySelector("#delete")
 const boards = JSON.parse(item)
 
 
@@ -28,3 +28,15 @@ function modifyHandler (e) {
 }
 
 modify.addEventListener('click', modifyHandler)
+
+
+delete_btn.addEventListener("click", function(){
+    const deletCheck = confirm("삭제하시겠습니까?")
+    if(deletCheck){
+        boards.splice(index, 1)
+        const item = JSON.stringify(boards)
+        localStorage.setItem("boards", item)
+        location.href= `/board/list.html?index=${index}`
+
+    }
+})
