@@ -6,10 +6,19 @@ class Board{
         this.subject = subject
         this.content = content
         this.writer = writer
-        this.date = "2022-11-20" 
-        this.hit = 0
+        this.date = this.getToday(new Date());
+        this.hit = 0;
+      }
+      getToday(date) {
+        let mm = date.getMonth() + 1; // 0 ~ 11
+        mm = (mm > 9 ? "" : "0") + mm; // 01 02...09 10 11
+        let dd = date.getDate(); // 1 ~ 31
+        dd = (dd > 9 ? "" : "0") + dd;
+        let yyyy = date.getFullYear();
+        const arr = [yyyy, mm, dd];
+        return arr.join(" / ");
+      }
     }
-}
 
 function submitHandler(e){
     e.preventDefault()
