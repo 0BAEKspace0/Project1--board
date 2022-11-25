@@ -16,3 +16,15 @@ for (let i=0; i<viewFrm.length; i++) {
     span.innerHTML = board[id]
 }
 
+
+
+// 수정 기능 구현
+const modify = document.querySelector("#modify")
+
+
+function modifyHandler (e) {
+    e.preventDefault()
+    location.href = `../board/modify.html?index=${index}`
+}
+
+modify.addEventListener('click', modifyHandler)
