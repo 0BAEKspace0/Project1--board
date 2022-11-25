@@ -47,3 +47,24 @@ if (document.referrer.indexOf("list.html") !== -1){
     const item = JSON.stringify(boards)
     localStorage.setItem("boards", item)
 }
+
+
+const prev = document.querySelector("#prev")
+const next = document.querySelector("#next")
+
+
+
+function prevHandler (e) {
+    if (index > 0) {
+    window.location.href = "../board/view.html?index=" + (Number(index)-1)
+    } else return alert("마지막 글입니다.")
+}
+function nextHandler (e) {
+    if (index < boards.length-1) {
+    window.location.href = "../board/view.html?index=" + (Number(index)+1)
+    } else return alert("최신 글입니다.")
+}
+
+
+prev.addEventListener ("click", prevHandler)
+next.addEventListener ("click", nextHandler)
