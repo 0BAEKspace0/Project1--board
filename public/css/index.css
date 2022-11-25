@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f5f5f5
+}
+
+#wrap {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+table {
+    border: 1px #a39485 solid;
+    font-size: .9em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+    width: 90%;
+    margin: 20px auto 0 auto;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+h2 {
+    display: inline-block;
+    padding: 50px 0 0 50px;
+}
+
+#write {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background: #514941;
+    bottom : -50px;
+    right: 50px;
+}
+
+.th {
+    font-weight: bold;
+    color: #fff;
+    background: #73685d;
+    text-align: center;
+}
+
+.index {
+    width: 7%;
+}
+
+.subject {
+    width: 60%;
+}
+
+.writer {
+    width: 15%;
+}
+
+.date {
+    width: 11%;
+}
+
+.hit {
+    width: 7%;
+}
+
+
+
+td {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    background: #fff;
+    padding: 1em .5em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+tr>td:nth-child(2) {
+    text-align: left;
+}
+
+a {
+    color: #73685d;
+}
+
+@media all and (max-width: 768px) {
+
+    table,
+    thead,
+    tbody,
+    .th,
+    td,
+    tr {
+        display: block;
+    }
+
+
+    table {
+        position: relative;
+        padding-bottom: 0;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    }
+
+    thead {
+        float: left;
+        white-space: nowrap;
+    }
+
+    tbody {
+        overflow-x: auto;
+        overflow-y: hidden;
+        position: relative;
+        white-space: nowrap;
+    }
+
+    tr {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    td {
+        border-bottom: 1px solid #e5e5e5;
+    }
+}
