@@ -40,3 +40,10 @@ delete_btn.addEventListener("click", function(){
 
     }
 })
+
+const a = document.referrer
+if (document.referrer.indexOf("list.html") !== -1){
+    board.hit += 1
+    const item = JSON.stringify(boards)
+    localStorage.setItem("boards", item)
+}
